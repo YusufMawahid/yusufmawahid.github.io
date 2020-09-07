@@ -1,9 +1,11 @@
-<?php
-$to = "yusufmawahid100@gmail.com";
-$subject = $_POST['subject'];
-$txt = $_POST['message'];
-$headers = "From: ".$_POST['email'] . "\r\n" .
-"CC: wahidajjah52@gmail.com";
+<?php 
+$mail = new Nette\Mail\Message;
+$mail->setFrom($_POST['email'])
+    ->addTo('yusufmawahid100@gmail.com')
+    ->setSubject($_POST['subject'])
+    ->setBody($_POST['message']);
 
-mail($to,$subject,$txt,$headers);
+$mailer = new Nette\Mail\SendmailMailer;
+$mailer->send($mail);
+
 ?>
