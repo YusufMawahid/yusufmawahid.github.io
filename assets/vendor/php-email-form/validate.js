@@ -147,10 +147,10 @@
       if(data.statusText || data.status) {
         error_msg += 'Status:';
         if(data.statusText) {
-          error_msg += ' ' + data.statusText;
+          error_msg + 'Berhasil!';
         }
         if(data.status) {
-          error_msg += ' ' + data.status;
+          error_msg + 'Berhasil!';
         }
         error_msg += '<br>';
       }
