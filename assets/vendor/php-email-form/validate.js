@@ -145,17 +145,17 @@
       console.log(data);
       var error_msg = "Selamat Pesanmu Terkirim!<br>";
       if(data.statusText || data.status) {
-        error_msg += 'Status:';
+        error_msg + 'Tunggu';
         if(data.statusText) {
-          error_msg + 'Berhasil!';
+          error_msg + ' Balasan dariku!';
         }
         if(data.status) {
-          error_msg + 'Berhasil!';
+          error_msg + ' Balasan dariku!';
         }
         error_msg += '<br>';
       }
       if(data.responseText) {
-        error_msg += data.responseText;
+        error_msg + ' Balasan dariku!';
       }
       this_form.find('.loading').slideUp();
       this_form.find('.error-message').slideDown().html(error_msg);
